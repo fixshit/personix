@@ -1,0 +1,33 @@
+#+title: Personix - All the Hacks So You Don't Hacks To
+* About
+This is an extract of my personal nix config repo. I'm helping @mathpunk get going with Nix, and I'm taking the opportunity to get myself into a shared resource mindset. I frickin hate all the little isolated fifedoms in Nix land. Let's share the maintenance burden so we can make better tools and move forward! There's lots more fun to be had further down the road.
+* Usage
+The basic flow is to create your own instance repo using the provided template, then then modify it using the inline comments as your guide, to suit your needs. Think something like Spacemacs/Doom Emacs, but for your personal systems.
+You can also use tools provided by this repo ad-hoc, without any config. More on that later.
+** Install Nix
+If you don't already have Nix on the current host,
+ - Linux and MacOS: run [[file:cmd/install-nix][./cmd/install-nix]]. You can just paste the contents into a term or whatever if you don't have this repo checked out locally.
+ - Windows: You can install Nix into the default Ubuntu/Debian WSL2 env under Windows, although I would instead recommend installing a NixOS env using [[https://github.com/nix-community/NixOS-WSL][nix-community/NixOS-WSL]]
+ - Android: install the [[https://github.com/t184256/nix-on-droid][nix-on-droid]] app, which provides a Nix chroot ala Termux, [[https://f-droid.org/packages/com.termux.nix/][from F-Droid]] (I highly recommend [[https://f-droid.org/en/packages/com.machiav3lli.fdroid/][Neo Store]] over the official F-Droid client app). Nix-on-droid also offers some platform integrations to control your Android device.
+* Tasks
+** Epics
+*** Bootstrap
+**** DONE install-nix script (just run determinate installer)
+**** TODO tools/nix metapackage
+- nix-tree
+**** tools/helix metapackage
+**** TODO bootstrap script
+ - set experimental flags
+ - host name
+ - build nix-darwin or nixos
+*** nix-on-droid
+*** Nix-Darwin
+*** Home-manager
+*** NixOS
+*** WSL2
+**** TODO Install script for WSL2 NixOS
+* Plan
+- Factor out stuff from [[https://github.com/edrex/nixcfg/][edrex/nixcfg]], and add this repo as a dependency for that
+- Develop @mathpunk's config in a subdir [[file:persons/mathpunk]] to keep everything sync'd up as we bootstrap.
+- Develop [[file:templates/default]] in parallel, adding each feature as it becomes available. Inline comments there should comprehensively document currently available functionality.
+- Once things are reasonably feature-complete, we'll factor out Tom's config using git-filter-repo.
