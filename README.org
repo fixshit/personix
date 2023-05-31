@@ -1,11 +1,22 @@
-#+title: Personix - All the Hacks So You Don't Hacks To
-* Personix
-** What
+#+title: Personix
+#+description: All the Hacks So You Don't Hacks To
 
-- Composable layers for configuring your personal systems
-- Factored out from my nix config (and hopefully others too in the future)
-- @mathpunk is user #2
-- Lets get together and fix shit, share the maintenance burden, make better tools, move forward! There's lots more fun to be had further down the road.
+** A Call to Action
+
+Configuring personal infrastructure  is too hard, which limits both what we can accomplish, and who can play along.
+
+Let's make it easier for everyone, so we can move forward and build stronger communities.
+There's lots more fun to be had further down the road.
+
+* Personix
+** About
+Composable layers for configuring your personal systems.
+ 
+** Design principles
+*** [[https://dl.acm.org/doi/fullHtml/10.1145/3411764.3445231][Expressivity]]
+- model config using meaningful domain objects
+- minimize boilerplater
+
 
 ** Usage
 The basic flow is to create your own instance repo using the provided template, then then modify it using the inline comments as your guide, to suit your needs. Think something like Spacemacs/Doom Emacs, but for your personal systems.
